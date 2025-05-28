@@ -4,11 +4,7 @@
       <slot />
     </span>
 
-    <span
-      v-if="processing || loading"
-      class="absolute"
-      style="top: 50%; left: 50%; transform: translate(-50%, -50%)"
-    >
+    <span v-if="processing || loading" class="absolute" style="top: 50%; left: 50%; transform: translate(-50%, -50%)">
       <Loader class="text-white" width="32" />
     </span>
   </component>
