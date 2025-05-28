@@ -8,12 +8,14 @@
             <div class="flex flex-col space-y-2">
               <div class="flex items-center justify-between space-x-2">
                 <input readonly class="w-full form-control form-input" type="text" :value="newToken" data-disabled />
-                <IconButton v-tooltip="{
-                  content: __('Copied to clipboard'),
-                  triggers: ['click'],
-                  placement: 'right',
-                  autoHide: true,
-                }" icon-type="clipboard" @click.prevent.stop="copyValueToClipboard" />
+                <Button type='button' variant='action' icon-type="clipboard" @click.prevent.stop="copyValueToClipboard">
+                  <NovaIcon v-tooltip="{
+                    content: __('Copied to clipboard'),
+                    triggers: ['click'],
+                    placement: 'right',
+                    autoHide: true,
+                  }" name='clipboard' type='solid' />
+                </Button>
               </div>
               <HelpText class="mt-2 help-text-error">
                 {{
@@ -29,9 +31,9 @@
 
       <ModalFooter>
         <div class="ml-auto">
-          <DefaultButton type="button" @click.prevent="handleConfirmed">
+          <NovaButton type="button" @click.prevent="handleConfirmed">
             {{ __("Confirm") }}
-          </DefaultButton>
+          </NovaButton>
         </div>
       </ModalFooter>
     </div>
@@ -39,7 +41,9 @@
 </template>
 
 <script>
+import { Button as NovaButton, Icon as NovaIcon } from 'laravel-nova-ui';
 export default {
+  components: { NovaButton, NovaIcon },
   props: {
     newToken: {
       required: true,
