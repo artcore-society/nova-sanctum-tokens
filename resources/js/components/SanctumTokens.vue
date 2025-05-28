@@ -2,9 +2,9 @@
   <div class="relative">
     <Heading :level="1" class="mb-3 flex items-center justify-between">
       <p>{{ __("Personal Access Tokens") }}</p>
-      <DefaultButton @click="showCreateTokenModal = true">
+      <NovaButton @click="showCreateTokenModal = true">
         {{ __("Create Token") }}
-      </DefaultButton>
+      </NovaButton>
     </Heading>
     <Card>
       <div class="flex flex-col md:flex-row md:items-center py-3 border-b border-gray-200 dark:border-gray-700"></div>
@@ -51,7 +51,9 @@
 </template>
 
 <script>
+import { Button as NovaButton } from 'laravel-nova-ui';
 export default {
+  components: { NovaButton },
   props: ["resourceName", "resourceId", "panel"],
   data() {
     return {
