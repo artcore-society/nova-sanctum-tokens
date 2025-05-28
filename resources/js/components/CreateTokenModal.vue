@@ -32,7 +32,7 @@
 
       <ModalFooter>
         <div class="ml-auto">
-          <NovaButton type="button" class="mr-3" @click.prevent="handleCancelled">
+          <NovaButton type="button" class="mr-3" variant="ghost" @click.prevent="handleCancelled">
             {{ __("Cancel") }}
           </NovaButton>
 
