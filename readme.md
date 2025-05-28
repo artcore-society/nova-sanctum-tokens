@@ -1,3 +1,9 @@
+>[!IMPORTANT]
+> This package was forked from [jeffbeltran/sanctum-tokens](https://github.com/JeffBeltran/sanctum-tokens), as we require the upgrade before the package is bumped for Nova 5
+> Only the name of the package has been changed. To make a clear separation with our own Package repository
+> Please resort back to the original package once its updated for Nova 5
+
+
 # Create a Sanctum Personal Access Tokens in Nova
 
 This package allows you to use [Sanctum](https://laravel.com/docs/7.x/sanctum) to generate a Personal Access Tokens in [Nova](https://nova.laravel.com/).
