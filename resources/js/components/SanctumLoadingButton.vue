@@ -11,11 +11,13 @@
 </template>
 
 <script>
+import { Button as NovaButton } from 'laravel-nova-ui';
 export default {
+  components: { NovaButton },
   props: {
     size: {
       type: String,
-      default: "lg",
+      default: "large",
     },
 
     align: {
@@ -36,7 +38,7 @@ export default {
 
     component: {
       type: String,
-      default: "DefaultButton",
+      default: "NovaButton",
     },
   },
 };
